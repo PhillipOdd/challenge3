@@ -1,0 +1,26 @@
+.title
+{
+    text-align: center;
+    color: orange;
+    background-color: black;
+}
+
+.intro
+{
+    text-align: center;
+    color: orange;
+    background-color: black;
+}
+
+.films
+{
+    font-size: 20px;
+    color: orange;
+    margin-right: 100px;
+}
+
+.movieList
+{
+margin-left: 900px;
+
+}
