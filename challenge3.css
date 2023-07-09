@@ -1,26 +1,51 @@
-.title
-{
+body {
     text-align: center;
+    font-family: cursive;
+    background-color: black;
+    color: orange;
+}
+
+.title {
+    background-color: black;
+    color: orange;
+    font-family: 'Creepster', cursive;
+    font-size: 35px;
+}
+
+.intro {
     color: orange;
     background-color: black;
+    font-size: 25px;
 }
 
-.intro
-{
-    text-align: center;
-    color: orange;
-    background-color: black;
+.container {
+    background:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+#poster{
+    width: 250px;
+}
+.films{
+    font-size: 25px;
+    
+}
+.movie{
+    font-size: 25px;
+    
+    
 }
 
-.films
-{
-    font-size: 20px;
-    color: orange;
-    margin-right: 100px;
-}
+ul{
 
-.movieList
-{
-margin-left: 900px;
+    list-style-type: none;
+    line-height: 1.6;
+}
+#title{
+
+font-family: 'Creepster', cursive;
 
 }

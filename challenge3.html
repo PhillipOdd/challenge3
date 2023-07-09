@@ -1,13 +1,20 @@
+<!--intialize html-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>FLATDANGO THEATERS</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--links for using google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <!--css file link-->
     <link rel="stylesheet" href="challenge3.css">
-    <link rel="stylesheet" href="another_danger/Another Danger Slanted - Demo.otf">
     <script src="challenge3.js"></script>
+    <!--js file link-->
+    <title>FLATDANGO THEATERS</title>
 </head>
 
 <body>
@@ -16,26 +23,34 @@
     </div>
 
     <div class="intro">
-        Welcome to flatdango theaters, where we display only the best films!!!. Sit back and enjoy all the movies wwe
-        have to show you. Browse through the catalogue below and buy a ticket, sit back and enjoy.
+        Welcome to flatdango theaters, where we display only the best films!!!.We have alot of movies showing in the
+        theater tonight so browse through the catalogue below and buy a ticket, sit back and enjoy.
     </div>
 
 
-    <div class="films">
-        <ul id="films"></ul>
-    </div>
 
-    <div class="movieList">
-        <div id="movie-details">
-            <img id="poster" src="" alt="Movie Poster">
+    <div class="container">
+        <div class="films">
+            <ul id="films"></ul>
+        </div>
+        <!--calculate available tickets-->
+        <script>
+            function buyTicket() {
+                const availableTickets = `Available Tickets: ${movie.capacity - movie.tickets_sold}`;
+                if (availableTickets > 0) {
+                    --availableTickets;
+                }
+            }
+        </script>
+
+        <div class="movie">
             <h2 id="title"></h2>
+            <img id="poster" src="" alt="Movie Poster">
+            <a id="description"></a>
             <p id="runtime"></p>
             <p id="showtime"></p>
             <p id="available-tickets"></p>
-            <button id="buy-ticket">Buy Ticket</button>
+            <button onclick="buyTicket()" id="buy-ticket">Buy Ticket</button>
         </div>
     </div>
-
-</body>
-
-</html>
+    </div>

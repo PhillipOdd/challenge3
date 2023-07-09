@@ -5,6 +5,15 @@ fetch('db.json')
         const films = data.films;
         const items = document.querySelector('#films');
 
+        //fucntioon to calculate available tickets
+        function buyTicket(){
+        const availableTickets = films.capacity - films.tickets_sold;
+            if (availableTickets > 0) {
+                --availableTickets;
+        }
+    }
+        
+
         //creating a list for movie titles
         for (let i = 0; i < films.length; i++) {
             const movie = films[i];
@@ -12,26 +21,32 @@ fetch('db.json')
             listItem.textContent = movie.title;
             items.appendChild(listItem);
 
-            // add an event listener to display the movie details when the movie title is clicked
+            // This displays a movies details when clicked
             listItem.addEventListener('click', () => {
                 movieDetails(movie);
             });
         }
+        
 
-        // display the details of the first movie by default
+        // first movie on the list
         movieDetails(films[0]);
     })
 
 // function to display the movie details
 function movieDetails(movie) {
+
+
+
     const poster = document.querySelector('#poster');
+    const description = document.querySelector('description');
     const title = document.querySelector('#title');
     const runtime = document.querySelector('#runtime');
     const showtime = document.querySelector('#showtime');
     const availableTickets = document.querySelector('#available-tickets');
-    const description = document.querySelector('#movie-details p:last-of-type');
+    
+    
 
-    // update the movie details in the DOM with the data from the movie object
+    // update the movie details 
     poster.src = movie.poster;
     title.textContent = movie.title;
     runtime.textContent = `Runtime: ${movie.runtime} Min`;
